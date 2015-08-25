@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BitKoin</title>
+      {% load bootstrap3 %}
+      <link href="static/css/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!--      <link href="static/css/bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet"/>-->
+      <link href="static/css/bootstrap-3.3.4-dist/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+      
+<link href="/static/css/main.css" rel="stylesheet">
+
+<!--    <link rel="stylesheet" href="static/css/styles.css" />-->
+  </head>
+  <body >
+    <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand text-danger" href="#">BITKOIN</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-collapsible">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">About Bitcoin</a></li>
+                <li><a href="#section3">A Little More</a></li>
+                <li><a href="#section4">Form</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url "register" %}">Sign Up</a></li>
+                <li><a href="{% url "login" %}">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="container-fluid" id="section1">
+    <div class="v-center">
+        <h1 class="text-center">BitKoin</h1>
+        <h3 class="text-center body animate slideInDown">Kenya's  <b>#1</b> Bitcoin Market Place</h3>
+        <p class="text-center">
+            <br>
+            <a href="register/" class="btn btn-danger btn-lg btn-huge lato">Sign Up For Free</a>
+        </p>
+    </div>
+    <a href="#section2">
+		<div class="scroll-down bounceInDown animated">
+            <span>
+                <i class="fa fa-angle-down fa-2x"></i>
+            </span>
+		</div>
+        </a>
+</section>
+
+<section class="container-fluid" id="section2">
+    <p class="text-center"><strong><h2 class="col-md-offset-5">Why Bitcoin?</h2></strong></p>
+    <div class="container v-center">
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInLeft animate">
+                            <div class="panel-heading">
+                            <h3>It's Fast</h3></div>
+                            <div class="panel-body">
+                                <p>International wire transfers can take from a few days to more than a week, whereas Bitcoin transactions are generally confirmed with an hour.</p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInUp animate">
+                            <div class="panel-heading">
+                            <h3>No Paperwork</h3></div>
+                            <div class="panel-body">
+                                <p>Anyone, from any country, of any age can accept Bitcoins within minutes. There is no ID card, passport or proof of address that all conventional banks required to open an account.</p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInRight animate">
+                            <div class="panel-heading">
+                            <h3>Be Your Own Bank</h3></div>
+                            <div class="panel-body">
+                                <p>You can literally have a “bank in your pocket” by way of a smartphone. This means that the bank is open 24/7, and you never have to ask permission to make a transaction of any kind. </p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/row-->
+        <div class="row">
+            <br>
+        </div>
+    </div>
+    <!--/container-->
+</section>
+
+<section class="container-fluid" id="section3">
+    <h1 class="text-center">Still not Convinced?</h1>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h3 class="text-center lato slideInUp animate">Take a look at this video to learn a little more.</h3>
+            <br>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://youtu.be/Gc2en3nHxA4"></iframe>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section id="section4">
+    <div class="container v-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Make Contact</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="row form-group">
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required="">
+                       
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required="">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-5">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-2">
+                        <button class="btn btn-default btn-md ">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 pull-right">
+                <address>
+              <strong>Email Us</strong><br>
+              <a href="#">bit.koin@gmail.com</a>
+            </address>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-3 column">
+                <h4>Information</h4>
+                <ul class="nav">
+                    <li><a href="about-us.html">Products</a></li>
+                    <li><a href="about-us.html">Services</a></li>
+                    <li><a href="about-us.html">Benefits</a></li>
+                    <li><a href="elements.html">Developers</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 column">
+                <h4>Follow Us</h4>
+                <ul class="nav">
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Google+</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 column">
+                <h4>Contact Us</h4>
+                <ul class="nav">
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Headquarters</a></li>
+                    <li><a href="#">Management</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 column">
+                <h4>Customer Service</h4>
+                <ul class="nav">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-right">©2015</p>
+    </div>
+</footer>
+<!-- Modal -->
+<!--
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+     Modal content
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+      </div>
+    </div>
+</div>
+-->
+
+<div id="myModal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="True">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="text-center"><img src="//placehold.it/110" class="img-circle"><br>Login</h2>
+            </div>
+            <div class="modal-body row">
+                <h6 class="text-center">COMPLETE THESE FIELDS TO SIGN UP</h6>
+                <form class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0" method="post" action="/register/">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ forms.email.errors }}
+                        <input type="text" id="username" value="{{ form.username }}" class="form-control input-lg" placeholder="Username" >
+                         
+                    <div class="form-group">
+                        {{ forms.password.errors }}
+                        <input type="password" id="password" value="{{ password }}" class="form-control input-lg" placeholder="Password" >
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="check_password" value="{{ check_password }}" class="form-control input-lg" placeholder="Verify" >
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-danger btn-lg btn-block">Sign In</button>
+                        <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <h6 class="text-center"><a href="">Privacy is important to us. Click here to read why.</a></h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="True">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="text-center"><img src="//placehold.it/110" class="img-circle"><br>Login</h2>
+            </div>
+            <div class="modal-body row">
+                <h6 class="text-center">COMPLETE THESE FIELDS TO SIGN UP</h6>
+                <form class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg" placeholder="Email">
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-lg" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-danger btn-lg btn-block">Sign In</button>
+                        <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <h6 class="text-center"><a href="">Privacy is important to us. Click here to read why.</a></h6>
+            </div>
+        </div>
+    </div>
+</div>      
+    <!--scripts loaded here-->
+    
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+      <script src="static/css/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+<!--      <script src="static/css/bootstrap-3.3.4-dist/js/npm.js"></script>-->
+      <script src="/static/js/app.js"></script>
+  </body>
+</html>

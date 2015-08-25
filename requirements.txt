@@ -1,0 +1,12 @@
+Django==1.8.4
+SQLAlchemy==1.0.8
+South==1.0.2
+argparse==1.2.1
+blockchain==1.1.2
+dj-database-url==0.3.0
+django-bootstrap3==6.2.2
+django-postgrespool==0.3.0
+gunicorn==19.3.0
+psycopg2==2.6.1
+whitenoise==2.0.3
+wsgiref==0.1.2
