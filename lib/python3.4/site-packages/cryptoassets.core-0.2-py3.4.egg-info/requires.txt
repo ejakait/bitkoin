@@ -1,0 +1,8 @@
+SQLAlchemy
+python-slugify
+block-io
+rainbow_logging_handler
+apscheduler
+PyYAML
+requests
+python-bitcoinrpc

@@ -11,8 +11,18 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-import dj_database_url
+import os.path 
+import sys
+
+# BITCOIN_MINIMUM_CONFIRMATIONS = 1
+# BITCOIND_CONNECTION_STRING = "http://root:password@127.0.0.1:8332"
+
+
+# # Use Django signals to tell the system when new money has arrived to your wallets
+# BITCOIN_TRANSACTION_SIGNALING = True
+
+
+# import dj_database_url
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,18 +39,26 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 # Application definition
 
+# django.setup()
 INSTALLED_APPS = (
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BitKoin',
     'bootstrap3',
+    'registration',
+    'cryptoassets.django',
+    'crispy_forms',
+    
 )
 
 MIDDLEWARE_CLASSES = (
@@ -59,7 +77,7 @@ ROOT_URLCONF = 'bitkoin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/caleb/bitkoin/bitkoin/static/templates',],
+        'DIRS': ['/home/caleb/Desktop/bitkoin/bitkoin/static/templates','/home/caleb/Desktop/bitkoin/bitkoin/static/templates/registration',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,15 +96,15 @@ WSGI_APPLICATION = 'bitkoin.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES['default'] =  dj_database_url.config()
-DATABASES['default']['ENGINE'] = 'django_postgrespool'
+#DATABASES['default'] =  dj_database_url.config()
+#DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
+ }
 
 
 # Internationalization
@@ -109,7 +127,66 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS  = (
-    'bitkoin/bitkoin/static/',
+    '/home/caleb/Desktop/bitkoin/bitkoin/static',
 
  )
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+CRYPTOASSETS = {
+
+    # It is recommended to use separate database for cryptoassets,
+    # but you can share the database with Django as well.
+    # In any case, cryptoassets
+    # will use a separate db connection.
+    # cryptoassets.django does not read the existing DATABASES setting.
+    # Configure the connection using SQLAlchemy syntax:
+    # http://cryptoassetscore.readthedocs.org/en/latest/config.html#database
+    "database": {
+       "url":"sqlite:///db_crypto.sqlite3",
+       "echo":False,
+    },
+
+    # Configure block.io API service with Bitcoin testnet
+    # (let's not play around with real Bitcoins yet)
+    "coins": {
+        "btc": {
+            "backend": {
+                "class": "cryptoassets.core.backend.blockio.BlockIo",
+                "api_key": "b206-e7c9-d5bd-be4e",
+                "network": "btctest",
+                "pin": "virgil11",
+                # Cryptoassets helper process will use this UNIX named pipe to communicate
+                # with bitcoind
+                "walletnotify": {
+                    "class": "cryptoassets.core.backend.sochainwalletnotify.SochainWalletNotifyHandler",
+                    "pusher_app_key": "9d4nx10uaavfa_q!%9w#5-*5dqqoprvb$jmn06bp%rz1^r0+eo"
+                },
+            }
+        },
+    },
+
+    # Bind cryptoassets.core event handler to Django dispacth wrapper
+    "events": {
+        "django": {
+            "class": "cryptoassets.core.event.python.InProcessEventHandler",
+            "callback": "cryptoassets.django.incoming.handle_tx_update"
+        }
+    },
+
+    # Start simple status at port 9001 for diagnostics
+    "status_server": {
+        "ip": "127.0.0.1",
+        "port": 9001
+    }
+}
+#django registration redux settings
+ACCOUNT_ACTIVATION_DAYS = 7
+# REGISTRATION_AUTO_LOGIN = True
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'ejakaitcaleb@gmail.com'
+EMAIL_HOST_PASSWORD = 'caleb010595'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+SITE_ID= 1
+# REGISTRATION_AUTO_LOGIN = True

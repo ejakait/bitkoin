@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BitKoin</title>
+      {% load bootstrap3 %}
+      <link href="static/css/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!--      <link href="static/css/bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet"/>-->
+      <link href="static/css/bootstrap-3.3.4-dist/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+      
+<link href="/static/css/main.css" rel="stylesheet">
+
+<!--    <link rel="stylesheet" href="static/css/styles.css" />-->
+  </head>
+  <body>
+    <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand text-danger" href="/">BITKOIN</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-collapsible">
+            <ul class="nav navbar-nav navbar-left">
+<!--
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">About Bitcoin</a></li>
+                <li><a href="#section3">A Little More</a></li>
+                <li><a href="#section4">Form</a></li>
+-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+<!--                <li><a href="#" data-toggle="modal" data-target="#myModal2">Sign Up</a></li>-->
+                <li><a href="{% url "login" %}">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="container-fluid" id="section1">
+    <div class="v-center">
+<!--    <div class="modal-content">-->
+        <div class="panel panel-default animate col-md- col-md-offset-3 col-xs-6 col-xs-offset-1">
+            <div class="panel-heading text-center">
+                <h2>Sign Up</h2>
+            <div class="panel-body">
+                <div class="text-center">
+        <form class="col-md-8 col-md-offset-2 col-xs-4 col-xs-offset-0" method="post" action="">
+                    {% csrf_token %}
+            <div class="form-group">
+                <div class="text-center">
+                         {% bootstrap_field form.username layout='vertical' size='md' %}
+                    </div>
+                    <div class="form-group">
+                       {% bootstrap_field form.email layout='vertical' size='md' %}
+                    </div>
+                    <div class="form-group">
+                         {#% bootstrap_field form.password layout='vertical' size='md' %#}
+                    </div>
+                    <div class="form-group">
+                         {#% bootstrap_field form.check_password layout='vertical' size='md' %#}
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-danger btn-md ">Sign In</button>
+                    </div>
+            </div>
+                </form>
+            </div>
+                </div>  
+    </div>
+    </div>
+    </div>
+      </section>
+      <footer id="footer" class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-3 column">
+                <h4>Information</h4>
+                <ul class="nav">
+                    <li><a href="about-us.html">Products</a></li>
+                    <li><a href="about-us.html">Services</a></li>
+                    <li><a href="about-us.html">Benefits</a></li>
+                    <li><a href="elements.html">Developers</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 column">
+                <h4>Follow Us</h4>
+                <ul class="nav">
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Google+</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 column">
+                <h4>Contact Us</h4>
+                <ul class="nav">
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Headquarters</a></li>
+                    <li><a href="#">Management</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 column">
+                <h4>Customer Service</h4>
+                <ul class="nav">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-right">©2015</p>
+    </div>
+</footer>
+    </body>
+    
+</html>

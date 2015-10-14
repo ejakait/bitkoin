@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: block-io
+Version: 1.1.2
+Summary: The easiest way to integrate Bitcoin, Dogecoin and Litecoin in your applications. Sign up at Block.io for your API key.
+Home-page: https://github.com/BlockIo/block_io-python
+Author: Atif Nazir
+Author-email: a@block.io
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

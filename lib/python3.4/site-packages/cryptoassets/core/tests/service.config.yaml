@@ -1,0 +1,25 @@
+---
+# Cryptoassets.core configuration for running bitcoind unit tests
+
+database:
+  url: sqlite:////tmp/cryptoassts-unittest-bitcoind.sqlite
+
+
+coins:
+    # Locally running bitcoind in testnet
+    btc:
+        backend:
+            class: cryptoassets.core.backend.bitcoind.Bitcoind
+            url: http://foo:bar@127.0.0.1:8332/
+            walletnotify:
+                class: cryptoassets.core.backend.pipewalletnotify.PipedWalletNotifyHandler
+                fname: /tmp/cryptoassets-unittest-walletnotify
+
+status_server:
+    ip: 127.0.0.1
+    port: 18881
+
+service:
+    broadcast_period: 60
+
+

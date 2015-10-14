@@ -11,7 +11,7 @@ from django.contrib.auth import authenticate,login,logout
 
 def home(request):
     context = RequestContext(request)
-    return render_to_response('index.html', context,)
+    return render_to_response("index.html", context,)
 
 def register(request):
     if request.user.is_authenticated():
@@ -24,7 +24,7 @@ def register(request):
             BitKoin.save()
             return HttpResponseRedirect('/profile/')
         else:
-            return render_to_response("register.html",locals(),context_instance = RequestContext(request))
+            return render_to_response("registration_form.html",locals(),context_instance = RequestContext(request))
     
 def LoginRequest(request):
     logged_in = False

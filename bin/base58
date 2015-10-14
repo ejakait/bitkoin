@@ -1,0 +1,10 @@
+#!/home/caleb/Desktop/bitkoin/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'base58==0.2.2','console_scripts','base58'
+__requires__ = 'base58==0.2.2'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('base58==0.2.2', 'console_scripts', 'base58')()
+    )

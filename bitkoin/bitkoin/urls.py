@@ -15,11 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+admin.autodiscover()
+
 
 urlpatterns = [
     url(r'^$', 'BitKoin.views.home', name='home'),
-    url(r'^register/$' ,'BitKoin.views.register', name = 'register'), 
-    url(r'^logout/$' ,'BitKoin.views.LogoutRequest', name = 'logout'),
-    url(r'^login/$' ,'BitKoin.views.LoginRequest', name = 'login'),
+    # url(r'^/accounts/register/$' ,'BitKoin.views.register', name = 'register'), 
+    # url(r'^acoounts/logout/$' ,'BitKoin.views.LogoutRequest', name = 'logout'),
+    # url(r'^accounts/login/$' ,'BitKoin.views.LoginRequest', name = 'login'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/', include('registration.backends.default.urls')),
+
 ]

@@ -36,19 +36,21 @@
                 <li><a href="#section4">Form</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url "register" %}">Sign Up</a></li>
-                <li><a href="{% url "login" %}">Login</a></li>
+                <li><a href="{% url "registration_register" %}">Sign Up</a></li>
+                <li><a href="{% url "auth_login" %}">Login</a></li>
             </ul>
         </div>
+        
     </div>
 </nav>
+
 <section class="container-fluid" id="section1">
     <div class="v-center">
         <h1 class="text-center">BitKoin</h1>
         <h3 class="text-center body animate slideInDown">Kenya's  <b>#1</b> Bitcoin Market Place</h3>
         <p class="text-center">
             <br>
-            <a href="register/" class="btn btn-danger btn-lg btn-huge lato">Sign Up For Free</a>
+            <a href="/accounts/register/" class="btn btn-danger btn-lg btn-huge lato">Sign Up For Free</a>
         </p>
     </div>
     <a href="#section2">
@@ -56,24 +58,29 @@
             <span>
                 <i class="fa fa-angle-down fa-2x"></i>
             </span>
+                   
 		</div>
+         
         </a>
+
 </section>
 
-<section class="container-fluid" id="section2">
-    <p class="text-center"><strong><h2 class="col-md-offset-5">Why Bitcoin?</h2></strong></p>
+<section class="container-fluid" id="section4">
+    <h1 class="text-center">Why Bitcoin?</h1>
     <div class="container v-center">
         
         <div class="row">
             <div class="col-sm-4">
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <div class="panel panel-default slideInLeft animate">
+                        <div class="panel panel-primary slideInLeft animate">
                             <div class="panel-heading">
+                                <i class="fa fa-fighter-jet fa-4x"></i>
                             <h3>It's Fast</h3></div>
                             <div class="panel-body">
-                                <p>International wire transfers can take from a few days to more than a week, whereas Bitcoin transactions are generally confirmed with an hour.</p>
-                                <hr>
+                                <p>International wire transfers can take from a few days to more than a week,
+                                     whereas Bitcoin transactions are generally confirmed with an hour.How's that for speed. ;-)</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -82,12 +89,13 @@
             <div class="col-sm-4 text-center">
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <div class="panel panel-default slideInUp animate">
+                        <div class="panel panel-primary slideInUp animate">
                             <div class="panel-heading">
+                                <i class="fa fa-file-text fa-4x"></i>
                             <h3>No Paperwork</h3></div>
                             <div class="panel-body">
                                 <p>Anyone, from any country, of any age can accept Bitcoins within minutes. There is no ID card, passport or proof of address that all conventional banks required to open an account.</p>
-                                <hr>
+
                             </div>
                         </div>
                     </div>
@@ -96,45 +104,48 @@
             <div class="col-sm-4 text-center">
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <div class="panel panel-default slideInRight animate">
+                        <div class="panel panel-primary slideInRight animate">
+                            
                             <div class="panel-heading">
+                                <i class="fa fa-university fa-4x "></i>
                             <h3>Be Your Own Bank</h3></div>
                             <div class="panel-body">
                                 <p>You can literally have a “bank in your pocket” by way of a smartphone. This means that the bank is open 24/7, and you never have to ask permission to make a transaction of any kind. </p>
-                                <hr>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--/row-->
-        <div class="row">
-            <br>
-        </div>
-    </div>
+       
+
     <!--/container-->
 </section>
 
-<section class="container-fluid" id="section3">
+<section class="container-fluid" id="section1">
     <h1 class="text-center">Still not Convinced?</h1>
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <h3 class="text-center lato slideInUp animate">Take a look at this video to learn a little more.</h3>
             <br>
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://youtu.be/Gc2en3nHxA4"></iframe>
+                    <iframe width="420" height="315"
+                        src="https://youtube.com/embed/Gc2en3nHxA4"">
+                    </iframe>
+                      
                 </div>
         </div>
     </div>
+    
 </section>
 
-<section id="section4">
+<section id="section3">
     <div class="container v-center">
         <div class="row">
             <div class="col-md-12">
                 <h1 class="text-center">Make Contact</h1>
-                <hr>
+                
             </div>
         </div>
         <div class="row">
@@ -167,7 +178,9 @@
             </div>
         </div>
     </div>
+    
 </section>
+
 <footer id="footer">
     <div class="container">
         <div class="row">
@@ -211,91 +224,8 @@
         <p class="text-right">©2015</p>
     </div>
 </footer>
-<!-- Modal -->
-<!--
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
 
-     Modal content
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-      </div>
-    </div>
-</div>
--->
 
-<div id="myModal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="True">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h2 class="text-center"><img src="//placehold.it/110" class="img-circle"><br>Login</h2>
-            </div>
-            <div class="modal-body row">
-                <h6 class="text-center">COMPLETE THESE FIELDS TO SIGN UP</h6>
-                <form class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0" method="post" action="/register/">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        {{ forms.email.errors }}
-                        <input type="text" id="username" value="{{ form.username }}" class="form-control input-lg" placeholder="Username" >
-                         
-                    <div class="form-group">
-                        {{ forms.password.errors }}
-                        <input type="password" id="password" value="{{ password }}" class="form-control input-lg" placeholder="Password" >
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="check_password" value="{{ check_password }}" class="form-control input-lg" placeholder="Verify" >
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-danger btn-lg btn-block">Sign In</button>
-                        <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <h6 class="text-center"><a href="">Privacy is important to us. Click here to read why.</a></h6>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="True">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h2 class="text-center"><img src="//placehold.it/110" class="img-circle"><br>Login</h2>
-            </div>
-            <div class="modal-body row">
-                <h6 class="text-center">COMPLETE THESE FIELDS TO SIGN UP</h6>
-                <form class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-                    <div class="form-group">
-                        <input type="text" class="form-control input-lg" placeholder="Email">
-                        
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control input-lg" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-danger btn-lg btn-block">Sign In</button>
-                        <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <h6 class="text-center"><a href="">Privacy is important to us. Click here to read why.</a></h6>
-            </div>
-        </div>
-    </div>
-</div>      
     <!--scripts loaded here-->
     
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

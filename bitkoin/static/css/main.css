@@ -7,12 +7,14 @@ html,body {
     background-size: cover;
     color:#444;
 /*    font-family: 'Lato', sans-serif;*/
-    font-family: Ubuntu;
+    font-family: Aunchanted;
+    font-size:20px;
 }
 
 @media (min-width:768px) {
     h1 {
         font-size:68px;
+        color: white;
         font-family: Technique BRK;
     }
 }
@@ -148,17 +150,22 @@ section {
 #section1, #section3 {
 	background-color: rgba(0,0,0,0.7);
 	color:#fff;
-/*	font-family: 'Bitter', serif;*/
-    font-family: Ubuntu;
+    font-family: Aunchanted;
+    /*font-family: Ubuntu;*/
 }
   
 #section4 {
-	background-color: #f6f6f6;
-	color:#444;
+    
+    /*background-color: #eee;*/
+	color:black;
+
+    background-color: rgba(0,0,0,0.9);
 }
   
 #section2 {
-	background-color: #fff;
+	/*background-color: #fff;*/
+    /*background-image: url('http://inflamore2k15.com/wp-content/uploads/2015/07/maxresdefault.jpg');*/
+	background-color: rgba(0,0,0,0.9);
 }
 
 #section3 {

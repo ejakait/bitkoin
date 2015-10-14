@@ -1,0 +1,16 @@
+CHANGES.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+rainbow_logging_handler/__init__.py
+rainbow_logging_handler.egg-info/PKG-INFO
+rainbow_logging_handler.egg-info/SOURCES.txt
+rainbow_logging_handler.egg-info/dependency_links.txt
+rainbow_logging_handler.egg-info/requires.txt
+rainbow_logging_handler.egg-info/top_level.txt
+rainbow_logging_handler/test/__init__.py
+rainbow_logging_handler/test/test_format.py
+rainbow_logging_handler/test/test_logging.py
+rainbow_logging_handler/test/test_unicode.py

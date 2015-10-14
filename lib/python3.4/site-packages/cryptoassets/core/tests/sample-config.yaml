@@ -1,0 +1,39 @@
+---
+# YAML
+# Cryptoassets.core configuration for the wallet sample project
+
+database:
+  url: sqlite:///:memory:?check_same_thread=false
+  pool_size: 1
+
+# What services we use to run talk to the cryptocurrency networks
+coins:
+    btc:
+        models: cryptoassets.core.coin.bitcoin.models
+        backend:
+            class: cryptoassets.core.backend.bitcoind.Bitcoind
+            # API key is to BTCTEST
+            url: http://foo:bar@127.0.0.1:8332/
+            walletnotify:
+                class: cryptoassets.core.service.pipewalletnotify.PipedWalletNotifyHandler
+                wallet: default
+                fname: /tmp/cryptoassets-bitcoin-core-walletnotify
+
+    doge:
+        models: cryptoassets.core.coin.dogecoin.models
+        backend:
+            class: cryptoassets.core.backend.blockio.BlockIo
+            network: doge
+            # API key is to Dogetest
+            api_key: 0266-c2b6-c2c8-ee07
+            pin: foobar123
+    ltc:
+        backend:
+            class: cryptoassets.core.backend.bitcoind.Bitcoind
+            # API key is to BTCTEST
+            url: http://foo:bar@127.0.0.1:8332/
+            walletnotify:
+                class: cryptoassets.core.service.pipewalletnotify.PipedWalletNotifyHandler
+                wallet: default
+                fname: /tmp/cryptoassets-bitcoin-core-walletnotify
+

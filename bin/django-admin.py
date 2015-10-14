@@ -1,4 +1,4 @@
-#!/home/caleb/bitkoin/bin/python2
+#!/home/caleb/Desktop/bitkoin/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
