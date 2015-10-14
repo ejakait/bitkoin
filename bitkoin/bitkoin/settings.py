@@ -142,7 +142,7 @@ CRYPTOASSETS = {
     # Configure the connection using SQLAlchemy syntax:
     # http://cryptoassetscore.readthedocs.org/en/latest/config.html#database
     "database": {
-       "url":"sqlite:///db_crypto.sqlite3",
+       "url":"sqlite:///db.sqlite3",
        "echo":False,
     },
 
@@ -158,8 +158,8 @@ CRYPTOASSETS = {
                 # Cryptoassets helper process will use this UNIX named pipe to communicate
                 # with bitcoind
                 "walletnotify": {
-                    "class": "cryptoassets.core.backend.sochainwalletnotify.SochainWalletNotifyHandler",
-                    "pusher_app_key": "9d4nx10uaavfa_q!%9w#5-*5dqqoprvb$jmn06bp%rz1^r0+eo"
+                    "class": "cryptoassets.core.backend.blockiowebsocket.BlockIoWebsocketNotifyHandler",
+
                 },
             }
         },
