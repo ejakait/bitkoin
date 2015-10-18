@@ -1,24 +1,26 @@
-APScheduler==3.0.4
-Django==1.8.5
-PyYAML==3.11
-SQLAlchemy==1.0.8
-Unidecode==0.4.18
-base58==0.2.2
-block-io==1.1.6
-colorama==0.3.3
-cryptoassets.core==0.2
-cryptoassets.django==0.1
-django-bootstrap3==6.2.2
-django-crispy-forms==1.5.2
-django-registration-redux==1.2
-ecdsa==0.13
+# Packages needed on rtd.org
+apscheduler==3.0.1
+SQLAlchemy==0.9.7
+block-io==1.1.2
+blockchain==1.0.1
+colorama==0.3.2
+
+# Python 3 compatibility, not released at the moment of writing
+-e git+https://github.com/miohtama/python-bitcoinrpc.git@e43303bba7a671b383016d29f55fd03aa0df235b#egg=python-bitcoinrpc
+ecdsa==0.11
 logutils==0.3.3
+pusherclient==0.3.0
 pycrypto==2.6.1
-python-bitcoinrpc==0.1
-python-slugify==1.1.4
-pytz==2015.6
+PyYAML==3.11
+requests==2.4.3
+six==1.8.0
+websocket-client==0.21.0
+zope.deprecation==4.1.1
+zope.dottedname==4.0.1
 rainbow-logging-handler==2.2.2
-requests==2.8.1
-six==1.10.0
-tzlocal==1.2
-virtualenv==13.1.2
+
+python-slugify==0.1.0
+Unidecode==0.04.16
+
+# pytz==2014.10
+# tzlocal==1.1.2

@@ -142,8 +142,8 @@ CRYPTOASSETS = {
     # Configure the connection using SQLAlchemy syntax:
     # http://cryptoassetscore.readthedocs.org/en/latest/config.html#database
     "database": {
-       "url":"sqlite:///db.sqlite3",
-       "echo":False,
+       "url":"sqlite:////tmp/cryptoassets.example.sqlite",
+       "echo":True
     },
 
     # Configure block.io API service with Bitcoin testnet
@@ -159,8 +159,10 @@ CRYPTOASSETS = {
                 # with bitcoind
                 "walletnotify": {
                     "class": "cryptoassets.core.backend.blockiowebsocket.BlockIoWebsocketNotifyHandler",
+                    # "pusher_app_key": "e9f5cc20074501ca7395"
 
                 },
+                # "testnet": True,
             }
         },
     },
